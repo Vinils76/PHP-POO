@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 1</title>
+    <title>Exemplo 2</title>
 </head>
 <body>
     <h1>PHP POO</h1>
     <hr>
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Criação de classe</li>
-        <li>Importação de arquivo de classe</li>
         <li>Criação de objetos</li>
+        <li>Uso do método construtor</li>
+        <li>Uso do <code>$this</code> para acessar as </li>
     </ul>
 
 <?php
@@ -21,8 +21,8 @@
 require_once "src/Cliente.php";
 
 // Criação dos objetos
-$clienteA = new Cliente;
-$clienteB = new Cliente;
+$clienteA = new Cliente('antonio', 'antonio@gmail.com');
+$clienteB = new Cliente('Alex turner', 'monkeys@artic.com');
 ?>
 
 <pre> <?=var_dump($clienteA, $clienteB)?> </pre>
