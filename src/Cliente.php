@@ -4,6 +4,7 @@ abstract class Cliente {
     private string $nome;
     private string $email;
     private string $senha;
+    private string $situacao = "a definir";
     
     /* Métodos getters e setters */
     public function getNome():string {
@@ -28,5 +29,17 @@ abstract class Cliente {
 
     public function setSenha(string $senha){
         $this->senha = password_hash($senha, PASSWORD_DEFAULT);
+    }
+
+    protected function getSituacao(): string
+    {
+        return $this->situacao;
+    }
+
+    protected function setSituacao(string $situacao): self
+    {
+        $this->situacao = $situacao;
+
+        return $this;
     }
 }
