@@ -1,11 +1,10 @@
 <?php
 require_once "Cliente.php";
-/* Final class
-Indica que a classe não permite herança */
-/* final */ class PessoaJuridica extends Cliente {
+
+class PessoaJuridica extends Cliente {
         private string $cnpj;
         private int $anoFundacao;
-        private string $nomeFantasia;
+        private string $nome;
 
         public function __construct()
         {
@@ -25,11 +24,11 @@ Indica que a classe não permite herança */
         public function setAnoFundacao(int $anoFundacao){
             $this->anoFundacao = $anoFundacao;
         }
-        public function getNomeFantasia():string{
-            return $this->nomeFantasia;
+        public function getNome():string{
+            return $this->nome;
         }
-        public function setNomeFantasia(string $nomeFantasia){
-            $this->nomeFantasia = $nomeFantasia;
+        public function setNome(string $nome){
+            $this->nome = "Empresa: ".$nome;
         }
     }
 ?>
