@@ -4,7 +4,12 @@ abstract class Livro {
     private string $autor;
     private int $paginas = 0;
 
-
+    public function formataTitulo(){
+        $str =  "<strong>".$this->getTitulo()."</strong>";
+        $str = mb_strtoupper($str);
+        return $str;
+        
+    }
     public function getTitulo(): string    
     {
         return $this->titulo;
