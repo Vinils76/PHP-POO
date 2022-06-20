@@ -1,5 +1,5 @@
 <?php
-require_once "Tecnico.php";
+namespace Exercicio;
 class Didatico extends Tecnico {
     private string $disciplina;
     private array $nivel = ["básico", "médio", "superior"];
